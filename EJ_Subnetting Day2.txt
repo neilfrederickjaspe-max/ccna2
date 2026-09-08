@@ -1,0 +1,127 @@
+-1	6789	6.7.254.255	:67EF:
+	6790	6.7.255.0	:67F0:
++1	6791	6.7.255.1	:67F1:
+
+
+-1	5388	5.3.254.254	:53EE:
+	5389	5.3.254.255	:53EF:
++1	5390	5.3.255.0	:53F0:
+________________________________________________________________
+195	8B
+13	4B
+1750	11B
+1855	11B
+2700	12B
+2	2B
+376	9B
+888	10B
+8	4B
+212	8B
+4500	13B
+81	7B
+20000	15B
+55	6B
+_____________________________________________________________
+Subnetting: Looking for Hosts (Bit length)
+
+Hosts: 58
+IP addreess: 192.168.1.0/24
+
+Convert (get the host Bits from the host) = 6Bits
+Subtract (/32 - <number of host bits>) = /32-6bits = /26 (4th,64i)
+Insert  = 192.168.1.64 /26
+_________________________________________________________________
+Subnetting: Looking for Hosts (Bit length)
+
+Accent (10.0.8.0/21)
+Net= 10.0.8.0/21 (3rd , 8i)
+First(+1 Net)= 10.0.8.1 
+last valid(-BC)= 10.0.15.254
+BroadC(-1 Not)= 10.0.15.255
+Not(Next Host Network)= 10.0.16.0 
+
+Concentrix (172.16.1.0/24)
+Net: 172.16.1.0/24 (3rd, 1i)
+First: 172.16.1.1 
+last valid: 172.16.1.254
+Broad: 172.16.1.255
+not: 172.16.2.0
+
+
+
+___________________________________________________________
+Subnetting: Looking for Hosts (Bit length)
+
+Host: 2400
+Network IP address: 10.12.32.0/19 (3rd, 16i)
+
+C= 12B
+S= /32-12 = /20 
+I= 10.12.48.0/20
+
+Net= 10.12.32.0/19 (3rd, 16i)
+1st Valid IP = 10.12.32.1
+last Valid IP= 10.12.47.254
+Broadcast=10.12.47.255
+
+Not=10.12.48.0
+___________________________________________________________________________
+Subnetting: Looking for Hosts (Bit length)
+
+Host: 45
+Network IP address: 192.168.0.0/24 (3rd, 1i)
+
+C= 6b
+S= /32-6 = /26 (4th, 64i)
+I= 192.168.0.64/26
+
+Net= 192.168.0.64/26 (4th, 64i)
+1st Valid IP = 192.168.0.65
+last Valid IP= 192.168.1.126
+Broadcast= 192.168.0.127 	
+
+Not=192.168.0.128
+___________________________________________________________________
+Subnetting: Looking for Subnets with Network address (Bit Value)
+Ex.7 Configure 8 sites using the network address 10.0.0.0/8
+
+Convert (Bit Value):8 sites = 3 bits 
+Add to given /x: /8 + 3bits = /11 (2nd, 32i)
+Insert 32i in 2nd octet 8(sites) times: 
+subnets: 10.0.0.0, 10.32.0.0, 10.64.0.0,,,
+
+Ex.8 Configure 4 sites using the network address 10.1.100.0/25 find the 2nd network.
+  
+C: 4sites = 2bits
+A: /25+2Bits = /27 (4th, 32i)
+I: 10.1.100.0, 10.1.100.32.0, 10.1.100.64.0, 10.1.100.96.0
+
+2nd Net:10.1.100.32 /27
+first:10.1.100.33
+last:10.1.100.62
+BC:10.1.100.63
+Not: 10.1.100.64
+___________________________________________________________________________
+
+Find the network:
+step 1: Find Rivan Format (Octet, Xi)
+step 2: Divisible by (i)
+step 3: Hulog
+
+1) 10.56.125.69/25 (4th, 128i)
+
+
+2) 172.16.177.23/18 (3rd, 64i)
+172.16.128.0/18
+
+3) 192.168.1.221/27 (4th, 32i)
+192.168.1.192/27  
+___________________________________________________________________________
+
+1)172.28.228.144/23 (3rd, 2i)
+172.28.228.0/23
+1st = 172.28.228.1
+2nd = 172.28.229.254
+
+2)172.28.228.144/25 (4th, 128)
+
