@@ -15,8 +15,6 @@ ipv6 add fd00:2::1800:0:0:1/69
 no shut
 end
 
-
-
 @R4
 conf t
 ipv6 unicast-routing
@@ -24,3 +22,50 @@ int e0/0
 ipv6 add fd00:2::1FFF:FFFF:FFFF:FFFF/69
 no shut
 end
+
+__________________________________________________________________
+
+2. Find the 1st and Last IPv6 address of 2001:db8:12::/126
+
+Network (Long)= 2001:0db8:0012:0000:0000:0000:0000:0000/126 (8,4th hex,4i)
+Network(short)= 2001:db8:12::/126
+1st valid = 2001:0db8:0012:0000:0000:0000:0000:0001
+1st valid (short)= 2001:db8:12::1
+last valid = 2001:0db8:0012:0000:0000:0000:0000:0003
+Not Network:2001:0db8:0012:0000:0000:0000:0000:0004
+
+
+
+@R4
+conf t
+ipv6 unicast-routing
+int e0/1
+ipv6 add 2001:db8:12::1/126
+no shut
+end
+
+@P1
+conf t
+ipv6 unicast-routing
+int e0/1
+ipv6 add 2001:db8:12::3/126
+no shut
+end
+
+3. Subnet for 52 offices using the network address fd00:3:0:33::/100
+determine the 3rd subnet. 
+
+Network: fd00:0003:0000:0033:0000:0000:0000:0000 /100 (7butas, 1st hex, 8)
+C= 52(6Bits) 
+A=/100+6bits = /106 
+I=fd00:0003:0000:0033:0000:0000:0000:0000 /106 (7butas, 3rd hex, 4i)
+fd00:0003:0000:0033:0000:0000:0040:0000 /106
+fd00:0003:0000:0033:0000:0000:0080:0000 /106
+
+network= fd00:0003:0000:0033:0000:0000:0080:0000/106
+1st IP = fd00:0003:0000:0033:0000:0000:0080:0001
+Last IP (non Any)(-1 sa first anycast)= fd00:0003:0000:0033:0000:0000:00BF:FF7F
+First Anycast (last 80)= fd00:0003:0000:0033:0000:0000:00BF:FF80/106
+last Anycast(-1 sa not)= fd00:0003:0000:0033:0000:0000:00BF:FFFF/106
+
+No network= fd00:0003:0000:0033:0000:0000:00C0:0000/106
