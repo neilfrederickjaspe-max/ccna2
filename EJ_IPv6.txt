@@ -55,7 +55,7 @@ end
 3. Subnet for 52 offices using the network address fd00:3:0:33::/100
 determine the 3rd subnet. 
 
-Network: fd00:0003:0000:0033:0000:0000:0000:0000 /100 (7butas, 1st hex, 8)
+Network: fd00:0003:0000:0033:0000:0000:0000:0000 /100 (7butas, 1st hex, 1i)
 C= 52(6Bits) 
 A=/100+6bits = /106 
 I=fd00:0003:0000:0033:0000:0000:0000:0000 /106 (7butas, 3rd hex, 4i)
